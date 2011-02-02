@@ -1,0 +1,25 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=3437
+
+PreciseJump aka '[count] motion' on drugs
+
+I find
+    <number>line-motion
+not very practical for bigger <numbers>.
+
+I usually don't know exactly how many times I want the motion to be repeated - I just see place on the screen where I want to jump to.
+
+This script is addressing this inconvenience.
+
+When the motion key is pressed, possible jump targets are highlighted. You just have to type character that appeared on desired place.
+
+i.e: If you press new '_fx' you get all 'x' characters in the line highlighted and changed to
+some unique chars. Pressing the highlighted char will take the cursor to place you want.
+
+For little demo you can see:
+http://i258.photobucket.com/albums/hh246/otokan/WATCH_ME.gif
+
+Plugin definines following mapping:  _f ,  _w ,  _e ,  _t . 
+
+This script is usable right now, but keep in mind that it still is being developed. 
+I will apriciate any comments.
+
