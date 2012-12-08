@@ -30,25 +30,27 @@ if !exists('g:PreciseJump_match_target_hi')
     let g:PreciseJump_match_target_hi = 'PreciseJumpTarget'
 endif
 
-nmap _F :call PreciseJumpF(0, 0, 0)<cr>
-vmap _F <ESC>:call PreciseJumpF(0, 0, 1)<cr>
-omap _F :call PreciseJumpF(0, 0, 0)<cr>
+if !exists('g:PreciseJump_disable_bindings')
+  nmap _F :call PreciseJumpF(0, 0, 0)<cr>
+  vmap _F <ESC>:call PreciseJumpF(0, 0, 1)<cr>
+  omap _F :call PreciseJumpF(0, 0, 0)<cr>
 
-nmap _f :call PreciseJumpF(-1, -1, 0)<cr>
-vmap _f <ESC>:call PreciseJumpF(-1, -1, 1)<cr>
-omap _f :call PreciseJumpF(-1, -1, 0)<cr>
+  nmap _f :call PreciseJumpF(-1, -1, 0)<cr>
+  vmap _f <ESC>:call PreciseJumpF(-1, -1, 1)<cr>
+  omap _f :call PreciseJumpF(-1, -1, 0)<cr>
 
-"nmap _t :call PreciseJumpT(-1, -1, 0)<cr>
-"vmap _t <ESC>:call PreciseJumpT(-1, -1, 1)<cr>
-"omap _t :call PreciseJumpT(-1, -1, 0)<cr>
-"
-"nmap _w :call PreciseJumpW(-1, -1, 0)<cr>
-"vmap _w <ESC>:call PreciseJumpW(-1, -1, 1)<cr>
-"omap _w :call PreciseJumpW(-1, -1, 0)<cr>
-"
-"nmap _e :call PreciseJumpE(-1, -1, 0)<cr>
-"vmap _e <ESC>:call PreciseJumpE(-1, -1, 1)<cr>
-"omap _e :call PreciseJumpE(-1, -1, 0)<cr>
+  "nmap _t :call PreciseJumpT(-1, -1, 0)<cr>
+  "vmap _t <ESC>:call PreciseJumpT(-1, -1, 1)<cr>
+  "omap _t :call PreciseJumpT(-1, -1, 0)<cr>
+  "
+  "nmap _w :call PreciseJumpW(-1, -1, 0)<cr>
+  "vmap _w <ESC>:call PreciseJumpW(-1, -1, 1)<cr>
+  "omap _w :call PreciseJumpW(-1, -1, 0)<cr>
+  "
+  "nmap _e :call PreciseJumpE(-1, -1, 0)<cr>
+  "vmap _e <ESC>:call PreciseJumpE(-1, -1, 1)<cr>
+  "omap _e :call PreciseJumpE(-1, -1, 0)<cr>
+end
 
 if exists('g:PreciseJump_I_am_brave')
     nmap F :call PreciseJumpF(0, 0, 0)<cr>
