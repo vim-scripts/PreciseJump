@@ -90,6 +90,7 @@ function! PreciseJumpE(lines_prev, lines_next, vismode)
 endfunction
 
 function! PreciseJumpF(lines_prev, lines_next, vismode)
+    echo "destination>"
     let re = nr2char( getchar() )
     let re = escape(re, '.$^~')
     redraw
