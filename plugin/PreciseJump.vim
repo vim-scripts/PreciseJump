@@ -24,7 +24,10 @@ if !exists('g:PreciseJump_target_keys')
 endif
 
 
-hi PreciseJumpTarget   ctermfg=yellow ctermbg=red cterm=bold gui=bold guibg=Red guifg=yellow
+"hi PreciseJumpTarget   ctermfg=yellow ctermbg=red cterm=bold gui=bold guibg=Red guifg=yellow
+if has("autocmd")
+  au ColorScheme * hi PreciseJumpTarget   ctermfg=yellow ctermbg=red cterm=bold gui=bold guibg=Red guifg=yellow
+endif
 
 if !exists('g:PreciseJump_match_target_hi')
     let g:PreciseJump_match_target_hi = 'PreciseJumpTarget'
